@@ -16,8 +16,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
-        
         self.view.addSubview(arView)
         arView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
