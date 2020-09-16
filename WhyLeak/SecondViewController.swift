@@ -12,28 +12,21 @@ import ARKit
 
 class SecondViewController: UIViewController {
     
-    let imageView = ARView()
+    let arView = ARView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
-        self.view.addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(arView)
+        arView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            arView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            arView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            arView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            arView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
         ])
-        imageView.automaticallyConfigureSession = true
-        
+        arView.automaticallyConfigureSession = true
         
     }
-    
-    deinit {
-//        imageView.image = nil
-        print("Leaving now")
-    }
-    
 }
