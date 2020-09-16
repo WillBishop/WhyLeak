@@ -7,10 +7,12 @@
 
 import Foundation
 import UIKit
+import RealityKit
+import ARKit
 
 class SecondViewController: UIViewController {
     
-    let imageView = UIImageView()
+    let imageView = ARView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +26,13 @@ class SecondViewController: UIViewController {
             imageView.topAnchor.constraint(equalTo: self.view.topAnchor),
             imageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
         ])
-        imageView.contentMode = .scaleAspectFill
-        if let photo = UIImage(named: "photo") {
-            imageView.image = photo
-        }
+        imageView.automaticallyConfigureSession = true
+        
+        
     }
     
     deinit {
-        imageView.image = nil
+//        imageView.image = nil
         print("Leaving now")
     }
     
